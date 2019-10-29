@@ -47,13 +47,7 @@
     ?>
     <?php
         $file = fopen('log.txt', 'w');
-
-        if (file_exists($file)){
-            fwrite($file, PHP_EOL.getMDate().' | '.getIP().' | '.getBrowser().' | '.getLanguage());
-        }else{
-            fwrite($file, getMDate().' | '.getIP().' | '.getBrowser().' | '.getLanguage());
-        }
-
+        fwrite($file, getMDate().' | '.getIP().' | '.getBrowser().' | '.getLanguage());
         fclose($file);
     ?>
 </body>
